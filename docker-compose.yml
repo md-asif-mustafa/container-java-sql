@@ -13,7 +13,7 @@ services:
       - MSQL_ROOT_PASSWORD=vprodbpass
   
   vprcache01:
-    image: memchached
+    image: memcached
     ports:
       - "11211:11211"
   
@@ -46,4 +46,3 @@ services:
 volumes:
    vprodbdata: {}
    vproappdata: {}
-   
