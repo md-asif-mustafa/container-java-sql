@@ -1,10 +1,10 @@
 version: '3.8'
 services:
-  vprodb:
+  aprodb:
     build:
        context: ./Docker-files/db
     image: mdasif74/aprofiledb
-    container_name: vprodb
+    container_name: aprodb
     ports:
       - "3306:3306"
     volumes:
@@ -12,12 +12,12 @@ services:
     environment:
       - MYSQL_ROOT_PASSWORD=vprodbpass
   
-  vprcache01:
+  aprcache01:
     image: memcached
     ports:
       - "11211:11211"
   
-  vpromq01:
+  apromq01:
     image: rabbitmq
     ports:
       - "15672:15672"
@@ -25,21 +25,21 @@ services:
       - RABBITMQ_DEFAULT_USER=guest
       - RABBITMQ_DEFAULT_PASS=guest
 
-  vproapp:
+  aproapp:
     build:
        context: ./Docker-files/app
     image: mdasif74/aprofileapp
-    container_name: vproapp
+    container_name: aproapp
     ports:
       - "8080:8080"
     volumes:
       - vproappdata:/usr/local/tomcat/webapp
 
-  vproweb:
+  aproweb:
     build:
        context: ./Docker-files/web
     image: mdasif74/aprofileweb
-    container_name: vproweb
+    container_name: aproweb
     ports:
       - "80:80"
 
