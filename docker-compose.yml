@@ -27,7 +27,7 @@ services:
 
   aproapp:
     build:
-       context: ./Docker-files/app
+      context: ./Docker-files/app
     image: mdasif74/aprofileapp
     container_name: aproapp
     ports:
@@ -37,7 +37,7 @@ services:
 
   aproweb:
     build:
-       context: ./Docker-files/web
+      context: ./Docker-files/web
     image: mdasif74/aprofileweb
     container_name: aproweb
     ports:
