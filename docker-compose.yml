@@ -3,7 +3,7 @@ services:
   aprodb:
     build:
       context: ./Docker-files/db
-    image: mdasif74/aprofiledb
+    image: aprofiledb
     container_name: aprodb
     ports:
       - "3306:3306"
@@ -28,7 +28,7 @@ services:
   aproapp:
     build:
       context: ./Docker-files/app
-    image: mdasif74/aprofileapp
+    image: aprofileapp
     container_name: aproapp
     ports:
       - "8080:8080"
@@ -38,7 +38,7 @@ services:
   aproweb:
     build:
       context: ./Docker-files/web
-    image: mdasif74/aprofileweb
+    image: aprofileweb
     container_name: aproweb
     ports:
       - "80:80"
