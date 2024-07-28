@@ -2,7 +2,7 @@ version: '3.8'
 services:
   aprodb:
     build:
-       context: ./Docker-files/db
+      context: ./Docker-files/db
     image: mdasif74/aprofiledb
     container_name: aprodb
     ports:
