@@ -12,7 +12,7 @@ services:
     environment:
       - MYSQL_ROOT_PASSWORD=vprodbpass
   
-  vprcache01:
+  vprocache01:
     image: memcached
     ports:
       - "11211:11211"
