@@ -2,9 +2,9 @@ FROM openjdk:11 AS BUILD_IMAGE
 LABEL "Project"="Aprofile"
 LABEL "Author"="Asif"
 RUN apt update && apt install maven -y
-RUN git clone https://github.com/md-asif-mustafa/vprofile_project.git
+RUN git clone https://github.com/md-asif-mustafa/container-java-sql.git
 #ADD ../.. vprofile-project
-RUN cd vprofile_project && git checkout docker && mvn install
+RUN cd container-java-sql && git checkout containers && mvn install
 #RUN cd vprofile-project && mvn install
 
 
