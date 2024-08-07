@@ -10,7 +10,7 @@ services:
     volumes:
       - aprodbdata:/var/lib/mysql
     environment:
-      - MYSQL_ROOT_PASSWORD=aprodbpass
+      - MYSQL_ROOT_PASSWORD=vprodbpass
   
   aprcache01:
     image: memcached
