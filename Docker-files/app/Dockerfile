@@ -4,7 +4,7 @@ LABEL "Author"="Asif"
 RUN apt update && apt install maven -y
 RUN git clone https://github.com/md-asif-mustafa/container-java-sql.git
 #ADD ../.. vprofile-project
-RUN cd container-java-sql && git checkout containers && mvn install
+RUN cd container-java-sql && mvn install
 #RUN cd vprofile-project && mvn install
 
 
