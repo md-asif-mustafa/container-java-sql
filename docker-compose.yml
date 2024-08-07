@@ -1,10 +1,10 @@
 version: '3.8'
 services:
-  aprodb:
+  vprodb:
     build:
       context: ./Docker-files/db
     image: aprofiledb
-    container_name: aprodb
+    container_name: vprodb
     ports:
       - "3306:3306"
     volumes:
@@ -12,12 +12,12 @@ services:
     environment:
       - MYSQL_ROOT_PASSWORD=vprodbpass
   
-  aprcache01:
+  vprcache01:
     image: memcached
     ports:
       - "11211:11211"
   
-  apromq01:
+  vpromq01:
     image: rabbitmq
     ports:
       - "15672:15672"
